@@ -1,0 +1,10 @@
+<% if flash[:error] %>
+    <%= flash[:error] %>
+<% end %>
+
+<h1>Login</h1>
+<form action='/login' method='POST'>
+    <input type='email' name='email' placeholder='Email'>
+    <input type='password' name='passwprd' placeholder='Password'>
+    <input type='submit' value='Log in'
+</form>

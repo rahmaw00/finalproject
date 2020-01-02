@@ -1,0 +1,13 @@
+<h1>Sign up</h1>
+
+<% if flash[:error] %>
+    <%= flash[:error].each do |k, v| %>
+        <%= error %>
+    <% end %>
+<% end %>
+
+<form action='/signup' method='POST'>
+    <input type='email' placeholder='Email' name='user[:email]'><br>
+    <input type='passwprd' placeholder='Create a password' name='user[password]'><br>
+    <input type='submit' value='Sign up'>
+</form>
