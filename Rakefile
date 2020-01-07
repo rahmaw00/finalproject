@@ -1,2 +1,5 @@
 require 'sinatra/activerecord'
-require_relative './server'
+require 'sinatra/activerecord/rake'
+require './server'
+
+# require_relative './server'
