@@ -1,0 +1,34 @@
+body {
+  display: grid;
+  grid-template-areas: 'nav nav nav' 'main main aside' 'footer footer aside';
+  grid-template-rows: 7vh 60vh 13vh;
+  grid-template-columns: ;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: peachpuff;
+}
+
+nav {
+  background-color: thistle;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #hotpink;
+  display: inline;
+  padding-right: 50px;
+}
+
+main {
+  background-color: lightblue;
+}
+
+aside {
+  background-color: lightpink;
+}
+
+footer {
+  background-color: lightyellow;
+}

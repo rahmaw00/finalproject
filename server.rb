@@ -8,17 +8,12 @@ set :port, 3000
 set :database, {adapter: 'postgresql',
                 database: 'birdpress',
                 username: 'postgres',
-                password: 'RamataW113'
+                password: ENV['POSTGRES_PW']
                }
-# specified username and password (how secure is that), but don't want anyone to see it, so deleted it. will it still work without specification?
+# specified username and password (how secure is that), but don't want anyone to see it, so delete it. will it still work without specification?
 
 enable :sessions
 
-class User < ActiveRecord::Base
-end
-
-class Post < ActiveRecord::Base
-end
 
 get '/' do
     erb :home
@@ -42,11 +37,11 @@ end
 
 get '/logout' do
     erb :logout
-end     
+end
 
 post '/logout' do
     redirect '/'
-end    
+end
 
 get '/signup' do
     erb :signup
