@@ -1,3 +1,4 @@
+require 'dotenv/load'
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
@@ -24,10 +25,11 @@ get '/login' do
 end
 
 post '/login' do
+  puts params
     user = User.find_by(email: params[:email])
     passcode = params[:password]
     if user.password == passcode
-        session[:user_id] = user_id
+        session[:user_id] = user.id
         redirect '/profile'
     else
         flash[:error] = 'Invalid email or password. Please try again'
@@ -60,5 +62,29 @@ post '/signup' do
 end
 
 get '/profile' do
+    # user's posts
     erb :profile
+end
+
+get '/allposts' do
+  # display all the posts
+  @posts = Post.all
+  erb :allposts
+end
+
+get '/newpost' do
+  # form to create a new post
+  redirect '/posts' unless session[:user_id]
+  erb :newpost
+end
+
+post '/posts' do
+
+puts params
+  redirect '/posts' unless session[:user_id]
+  new_post = Post.new(title: params[:title], content: params[:content], user_id: session[:user_id])
+  if new_post.valid?
+    new_post.save
+    redirect '/posts'
+  end
 end

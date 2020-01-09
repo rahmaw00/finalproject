@@ -13,6 +13,7 @@ GEM
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
     concurrent-ruby (1.1.5)
+    dotenv (2.7.5)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     minitest (5.13.0)
@@ -44,6 +45,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  dotenv!
   pg!
   rake!
   sinatra!
