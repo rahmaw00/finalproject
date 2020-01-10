@@ -78,6 +78,16 @@ get '/newpost' do
   erb :newpost
 end
 
+get '/cancel' do
+  erb :cancel
+end
+
+post '/cancel' do
+  user = User.find_by(params['user_email'])
+  user.destroy
+  erb :signup
+end
+
 post '/posts' do
 
 puts params

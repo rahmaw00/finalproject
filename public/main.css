@@ -20,9 +20,10 @@ body {
 
 .title {
   font-size: 24px;
-  color: #388E8E;
+  color: #CE3371;
   position: absolute;
   top: 65px;
+  text-transform: uppercase;
 }
 
 .inputBox {
@@ -45,13 +46,15 @@ label {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #B21717;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  position: relative;
+  /* right: 5px; */
 }
 
 .container {
@@ -92,9 +95,6 @@ input[type=text]: focus {
   background-color: deepskyblue;
 }
 
-nav {
-}
-
 nav a {
   text-decoration: none;
   font-size: 18px;
@@ -109,23 +109,29 @@ nav a:link, a:visited {
   color: hotpink;
 }
 
-
-
 nav a:hover {
   color: brown;
 }
 
-main {
-}
-
-aside {
-}
-
-footer {
-}
-
 p {
-  position: absolute;
   left: 210px;
   top: 105px;
 }
+
+/* .about {
+  position: relative;
+  left: 123px;
+} */
+
+#bio {
+  text-align: justify;
+  max-width: 200px;
+  position: relative;
+  right: 48px;
+  top: -110px;
+}
+
+/* #proftitle {
+  position: relative;
+  top: 150px;
+} */
