@@ -55,6 +55,7 @@ input[type=submit] {
   float: right;
   position: relative;
   /* right: 5px; */
+  bottom: 55px;
 }
 
 .container {
@@ -64,6 +65,8 @@ input[type=submit] {
   margin-right: 45px;
   /* padding-top: 10px; */
   padding: 100px;
+  /* max-width: 50%;
+  max-height: 50%; */
 }
 
 .col-25 {
